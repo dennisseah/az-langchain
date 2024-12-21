@@ -4,10 +4,12 @@ from langchain_core.runnables import RunnableParallel, RunnablePassthrough
 
 from az_langchain.azure_openai_model import get_model as get_openai_model
 from az_langchain.azure_phi3_model import get_model as get_phi3_model
+from az_langchain.logger import enable_logging
 from az_langchain.templates import get_back2english_template, get_translate_template
 
 load_dotenv()
 
+enable_logging()
 phi3_model = get_phi3_model()
 openai_model = get_openai_model()
 

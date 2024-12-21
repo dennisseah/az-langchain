@@ -18,4 +18,5 @@ def get_model():
         api_version=os.environ["AZURE_OPENAI_API_VERSION"],
         model_name=os.environ["AZURE_OPENAI_DEPLOYED_MODEL_NAME"],
         temperature=0,
+        client_kwargs={"logging_enable": True},
     )

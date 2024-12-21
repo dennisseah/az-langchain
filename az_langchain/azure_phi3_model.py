@@ -12,4 +12,5 @@ def get_model():
             if "AZURE_PHI3_KEY" in os.environ
             else DefaultAzureCredential()
         ),
+        client_kwargs={"logging_enable": True},
     )
