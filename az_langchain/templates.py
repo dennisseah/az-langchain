@@ -1,7 +1,7 @@
 from langchain_core.prompts import PromptTemplate
 
 
-def get_translate_template():
+def get_translate_template() -> PromptTemplate:
     return PromptTemplate(
         template="""You are a translator, translate the following into {language}:
 
@@ -12,7 +12,7 @@ def get_translate_template():
     )
 
 
-def get_back2english_template():
+def get_back2english_template() -> PromptTemplate:
     return PromptTemplate(
         template="""You are a translator, translate the following into English:
 

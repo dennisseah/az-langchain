@@ -4,7 +4,7 @@ from azure.identity import DefaultAzureCredential
 from langchain_azure_ai.chat_models import AzureAIChatCompletionsModel
 
 
-def get_model():
+def get_model() -> AzureAIChatCompletionsModel:
     return AzureAIChatCompletionsModel(
         endpoint=os.environ["AZURE_PHI3_ENDPOINT"],
         credential=(

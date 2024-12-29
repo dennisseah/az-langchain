@@ -4,7 +4,7 @@ from azure.identity import DefaultAzureCredential
 from langchain_azure_ai.chat_models import AzureAIChatCompletionsModel
 
 
-def get_model():
+def get_model() -> AzureAIChatCompletionsModel:
     credential = (
         os.environ["AZURE_OPENAI_API_KEY"]
         if "AZURE_OPENAI_API_KEY" in os.environ
